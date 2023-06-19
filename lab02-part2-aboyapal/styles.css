@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Navigation styles */
+nav {
+  text-align: center;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 10px;
+}
+
+.main-menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.main-menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.main-menu li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Main section styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#main img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#main h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#main p {
+  text-align: justify;
+}
+
+/* Resume section styles */
+#resume h2 {
+  margin-bottom: 10px;
+}
+
+/* Contact Me section styles */
+#contact form label,
+#contact form input,
+#contact form textarea,
+#contact form input[type="submit"] {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#contact form textarea {
+  height: 150px;
+}
+
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Portfolio section styles */
+#portfolio h2 {
+  margin-bottom: 10px;
+}
+
+.project {
+  margin-bottom: 30px;
+}
+
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project p {
+  margin-bottom: 10px;
+}
+
+.project code {
+  display: block;
+  background-color: #f7f7f7;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.project img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+ footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+} 
+
+footer p {
+  margin: 0;
+} 
+

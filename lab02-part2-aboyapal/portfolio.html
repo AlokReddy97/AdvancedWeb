@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-jnpCk2ZhgdSlDYNGEaF3lpG7e8ATtwQ5kvL+6Pfp/DKZ7KmJbk0kmn6x/1j0XnywBrcMtt+vUMK3OPV4FqfzWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="main-menu">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+  
+      <div class="project">
+        <hr>
+        <h3>Natural Language Processing (NLP) for Customer Support - SEMICOLONS Hackathon</h3>
+        <p>Our team built a passive voice assistant to help automate tasks like scheduling meetings, making reservations, and performing call analysis.</p>
+        <pre><code>
+<b>Code Snippet:</b>
+def remove_stopwords(text: str) -> str:
+    stop_words = set(stopwords.words("english"))
+    stop_words.update(["time"]) # add custom stopwords
+    stop_words -= {"no", "not"} # remove custom stopwords
+    word_tokens = word_tokenize(text)
+    filtered_sentence = [w for w in word_tokens if not w in stop_words]
+    return " ".join(filtered_sentence)
+
+# Example usage:
+remove_stopwords("John has not done his homework in time")
+        </code></pre>
+        <img src="images/nlp-project-screenshot.jpg" alt="NLP Project Screenshot">
+        <hr>
+      </div>
+  
+      <div class="project">
+        <hr>
+        <h3>Web Scraper for Airlines Website (Freelancer Project)</h3>
+        <p>A web scraper designed to scrape airline websites (e.g., makemytrip.com) and store the fetched data in a database.</p>
+        <pre><code>
+<b>Code Snippet:</b>
+import re
+from urllib.request import urlopen
+
+url = "http://olympus.realpython.org/profiles/dionysus"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+
+pattern = "<title.*?>.*?</title.*?>"
+match_results = re.search(pattern, html, re.IGNORECASE)
+title = match_results.group()
+title = re.sub("<.*?>", "", title) # Remove HTML tags
+
+print(title)
+        </code></pre>
+        <img src="images/web-scraper-project-screenshot.jpg" alt="Web Scraper Project Screenshot">
+        <hr>
+      </div>
+  
+      <div class="project">
+        <hr>
+        <h3>Anomaly Detection using Clustering</h3>
+        <p>An anomaly detection project that categorizes dealers in Telangana state into genuine and anomalous using the K-means clustering technique.</p>
+        <pre><code>
+<b>Code Snippet:</b>
+data = data.drop('CustomerID', axis=1)
+data = data.rename(columns={
+    'Annual Income (k$)': 'Income',
+    'Spending Score (1–100)': 'Spend_Score'
+})
+df = pd.get_dummies(data)
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+num2 = scaler.fit_transform(num)
+num2 = pd.DataFrame(num2, columns=num.columns)
+        </code></pre>
+        <img src="images/anomaly-detection-project-screenshot.jpg" alt="Anomaly Detection Project Screenshot">
+        <hr>
+      </div>
+  
+      <div class="project">
+        <hr>
+        <h3>Website for Women Welfare Schemes - Smart India Hackathon - 2018</h3>
+        <p>Developed a website for women welfare schemes for the government of Gujarat using PHP, MySQL, and Bootstrap.</p>
+        <pre><code>
+<b>Code Snippet:</b>
+&lt;div class="infocus-cont"&gt;
+  &lt;span class="infocus-title"&gt;In Focus&lt;/span&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://wcd.nic.in/sites/default/files/Poshan n"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;&lt;a href="https://pmcaresen.in/"&gt;PM CARES for Children&lt;/a&gt;&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://cybercrime.gov.in" target="_blank"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="related-links" role="link"&gt;Related Links&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://awards.gov.in/"&gt;Apply for Nari Shakti Puraskar&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://awards.gov.in/Home/Awardpedia"&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+        </code></pre>
+        <img src="images/women-welfare-schemes-project-screenshot.jpg" alt="Women Welfare Schemes Project Screenshot">
+        <hr>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="footer">
+    <p>&copy; 2023 Alok Kumar Reddy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

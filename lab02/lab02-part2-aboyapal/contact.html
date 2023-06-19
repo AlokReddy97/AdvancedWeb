@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-jnpCk2ZhgdSlDYNGEaF3lpG7e8ATtwQ5kvL+6Pfp/DKZ7KmJbk0kmn6x/1j0XnywBrcMtt+vUMK3OPV4FqfzWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="main-menu">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="social-links">
+        <a href="https://github.com/AlokReddy97" target="_blank">
+          <i class="fa fa-github" style="font-size:36px"></i>
+          AlokReddy97
+        </a>
+        <a href="https://www.linkedin.com/in/alokreddy1/" target="_blank">
+            <i class="fa fa-linkedin" style="font-size:36px;color:navy"></i>
+            alokreddy1
+        </a>
+        <!-- Add more social media links/icons as needed -->
+      </div>
+      <form onsubmit="displayFormDetails(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+      <div id="formDetails"></div>
+    </div>
+  </section>
+
+  <!-- Added section about you -->
+  <section id="about-me">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I enjoy watching anime series, and two of my favorites are Death Note and Taira Capeta. I'm also a fan of Avicii's music. In my free time, I like playing table tennis and cricket.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 Alok Kumar Reddy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function displayFormDetails(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Display form details
+      var formDetailsElement = document.getElementById("formDetails");
+      formDetailsElement.innerHTML = "<p><b>Name:</b> " + name + "</p>" +
+                                     "<p><b>Email:</b> " + email + "</p>" +
+                                     "<p><b>Message:</b> " + message + "</p>";
+    }
+  </script>
+</body>
+</html>
