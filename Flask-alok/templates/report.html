@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Password Report</h1>
+{% if password_passed %}
+    <p>Password passed the requirements.</p>
+{% else %}
+    <p>Password did not meet the requirements.</p>
+{% endif %}
+{% endblock %}
