@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    ul, p, label, input {
+        font-size: 1.2em; font-family: Arial;
+    }
+
+</style>
+
+<p >&nbsp;&nbsp;&nbsp;Welcome to Password Check</p>
+<p >&nbsp;&nbsp;&nbsp;Let's see if your Password is secure!</p>
+<p >&nbsp;&nbsp;&nbsp;Fill out the form below with a User Name and password that have these restraints:</p>
+
+<ul >   
+        <li>Must have an uppercase letter somewhere.</li>
+        <li>Must have a lowercase letter somewhere.</li>
+        <li>Must have a number at the end.</li>
+    </ul>
+    <form action="/report" method="POST">
+        <label for="username" >Username:</label>
+        <input type="text" id="username" name="username"  required>
+
+        <label for="password" >Password:</label>
+        <input type="password" id="password" name="password"  required>
+
+        <input type="submit" value="Submit Form" >
+    </form>
+{% endblock %}

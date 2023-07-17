@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #e9ecef; 
+    }
+    p, li {
+        font-family: Arial;
+        font-size: 1.2em;
+    }
+</style>
+
+<!-- Display the message about password requirements -->
+<p>&nbsp;&nbsp;&nbsp;Let's see if your password meets the requirements</p>
+
+<!-- Check if the password requirements are not met -->
+{% if not passed_requirements %}
+    <p>&nbsp;&nbsp;&nbsp;Oh no! Looks like you had issues with your password!</p>
+    <p>&nbsp;&nbsp;&nbsp;Here are the requirements you failed:</p>
+    <ul>
+        {% if not has_uppercase %}
+            <li>You did not use an uppercase character.</li>
+        {% endif %}
+        {% if not has_lowercase %}
+            <li>You did not use a lowercase character.</li>
+        {% endif %}
+        {% if not ends_with_number %}
+            <li>You did not end your password with a number.</li>
+        {% endif %}
+        {% if not length_check %}
+            <li>Password should be at least 8 characters.</li>
+        {% endif %}
+    </ul>
+{% else %}
+    <!-- Display the success message if the password meets all the requirements -->
+    <p>Your password passed the 3 requirements!</p>
+{% endif %}
+
+<!-- Check if warning is true and display the warning message -->
+{% if warning %}
+    <p style="color: red;"><strong>&nbsp;&nbsp;&nbsp;Warning:</strong> The Password didn't meet the requirements and failed 3 times, Please recheck all the requirements and RETRY.</p>
+{% endif %}
+
+{% endblock %}
