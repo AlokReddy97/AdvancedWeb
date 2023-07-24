@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Details</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Database Details</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f1f3f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #f1f3f7;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+form {
+    text-align: center;
+}
+
+.register-heading {
+    color: #727273;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    position: relative;
+}
+
+.register-heading::before,
+.register-heading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 55px);
+    height: 1px;
+    background-color: #727273;
+}
+
+.register-heading::before {
+    left: 0;
+}
+
+.register-heading::after {
+    right: 0;
+}
+
+.register-message {
+    color: #ababac;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    flex: 0.8;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group .half-width {
+    flex: 0.48;
+}
+
+.form-group .full-width {
+    flex: 1;
+}
+
+.form-group1 {
+    margin-bottom: 15px;
+}
+
+.form-group1 input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a844;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.bottom-block {
+    background-color: #62748a;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-block .message {
+    color: white;
+    font-size: 14px;
+}
+
+.bottom-block .message a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bottom-block .message a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+}

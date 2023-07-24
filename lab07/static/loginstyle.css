@@ -1,0 +1,68 @@
+/* loginstyle.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 300px;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3a7fb9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #2a6d9e;
+}
+
+.message {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #8596a0;
+}
+
+.message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <style>
+        /* Additional style for the error message div */
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+    <script>
+        // JavaScript function to show/hide the error message
+        function showError() {
+            var errorMessage = document.getElementById("error-message");
+            errorMessage.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="/signup">
+            <div class="register-heading">Register</div>
+            <div class="register-message">Create your account. It's free and only takes a minute</div>
+            <div class="form-group">
+                <input type="text" name="first_name" placeholder="First Name" required class="half-width">
+                <input type="text" name="last_name" placeholder="Last Name" required class="half-width">
+            </div>
+            <div class="form-group1">
+                <input type="text" name="email" placeholder="Email" required class="full-width"><br>
+                <input type="password" name="password" placeholder="Password" required class="full-width"><br>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required class="full-width"><br>
+            </div>
+            <!-- Hidden error message div -->
+            <div class="error-message" id="error-message">Passwords do not match. Please try again.</div>
+            <input type="submit" value="Register" class="register-btn" onclick="validatePassword()">
+        </form>
+        <div class="bottom-block">
+            <div class="message">
+                Already have an account? <a href="/login">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to validate passwords before submitting the form
+        function validatePassword() {
+            var password = document.getElementsByName("password")[0].value;
+            var confirm_password = document.getElementsByName("confirm_password")[0].value;
+
+            if (password !== confirm_password) {
+                showError();
+                event.preventDefault(); // Prevent form submission if passwords don't match
+            }
+        }
+    </script>
+</body>
+</html>

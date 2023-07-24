@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="static/loginstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <!-- Display flashed messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="error-message">{{ messages[0] }}</div>
+            {% endif %}
+        {% endwith %}
+        <form method="post" action="/login">
+            <div class="message">Login to Your Account</div>
+            <input type="text" name="email" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <div class="message">
+            Not a Member Yet? <a href="/signup">Create an account</a>
+        </div>
+    </div>
+</body>
+</html>
